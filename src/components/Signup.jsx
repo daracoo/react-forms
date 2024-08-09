@@ -8,6 +8,9 @@ export default function Signup() {
         const data = Object.fromEntries(fd.entries());
         data.acquisition = acquisitionChannel;
         console.log(data);
+
+        event.target.reset(); //resetting values after submitting, 
+        //type="reset" in the form is resetting when we press on Reset button
     }
     return (
       <form onSubmit={handleSubmit}>
